@@ -7,14 +7,14 @@ import Button from '../../styledComponents//Button';
 
 const Project = () => {
     return (
-        <Wrapper padding='70px 0px 0px 0px' direction='column' justify='center' width='100%'>
+        <Wrapper id="projects" flexresponsive padding='70px 0px 0px 0px' direction='column' justify='center' width='100%'>
             <Header padding='10px 0px 30px 0px' weight='900' size='1.5em'>PROJECTS</Header>
-            <Wrapper direction='column'>
-            <Img width='330px' src={process.env.PUBLIC_URL + "/project.png"} />
+            <Wrapper className='flexresponsive' direction='column'>
+            <Img width='50vw' maxwidth='700px' minwidth='250px'src={process.env.PUBLIC_URL + "/project.png"} />
                 <Wrapper direction='column' justify='center' align='center' width='100%'>
-                    <Header size='1.2em' weight='400'>Weather App</Header>
-                    <Paragraph color={({ theme }) => theme.grey}  padding='10px 30px' size='1em'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</Paragraph>
-                    <Button size='12px' padding='15px 20px'>Git Hub</Button>
+                    <Header size='1.2em' weight='400' padding='10px 0px'>Weather App</Header>
+                    <Paragraph color={({ theme }) => theme.grey}  size='1em'>Checking weather solution in a clean, user friendly web application. Technologies used during development were React/Redux, Node/Express among with database MongoDB.</Paragraph>
+                    <Button target="_blank" href='https://github.com/bsylwestrzak-dev/weatherapp' size='12px' padding='15px 20px'>Git Hub</Button>
                 </Wrapper>
             </Wrapper>
         </Wrapper>

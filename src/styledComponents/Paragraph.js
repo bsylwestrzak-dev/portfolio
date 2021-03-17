@@ -5,6 +5,7 @@ const Paragraph = styled.p`
     color: ${({ color }) => color};
     font-size: ${({ size }) => size};
     padding: ${({ padding }) => padding};
+    text-align: ${({ align }) => align};
 `;
 
 export default Paragraph;

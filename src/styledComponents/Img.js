@@ -6,11 +6,18 @@ const Img = styled.img`
     max-width: ${({ maxwidth }) => maxwidth};
     min-width: ${({ minwidth }) => minwidth};
     margin: ${({ margin }) => margin};
-    ${({ contact }) => contact && `
+    cursor: pointer;
+    ${({ close }) => close && `
         position: absolute;
-        z-index: -1;
-        right:-40%;
-        top:5;
+        top:0;
+        right:0;
+        padding:10px 10px 0 0;
+        width: 30px;
+    `}
+    ${({ hamburger }) => hamburger && `
+        position: absolute;
+        top:16px;
+        right:40px;
     `}
 `;
 

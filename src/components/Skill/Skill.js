@@ -3,9 +3,11 @@ import Wrapper from '../../styledComponents/Wrapper';
 import Header from '../../styledComponents/Header';
 import Img from '../../styledComponents/Img';
 import Button from '../../styledComponents//Button';
+import useIsInViewport from 'use-is-in-viewport';
 
 
 const Skill = () => {
+    const [isInViewport, targetRef] = useIsInViewport()
     const skills = useState([
         {name: 'React.js', img:'/react.png', procent: '90%'},
         {name: 'Express.js', img:'/node.png', procent: '70%'},
@@ -26,7 +28,7 @@ const Skill = () => {
                         <Header padding='0px 0px 4px 0px' size='16px' weight='400'>{skill.procent}</Header>
                     </Wrapper>
                     <Wrapper skill_procent_outside>
-                        <Wrapper skill_procent_inside width={skill.procent}>
+                        <Wrapper className='skillbar' skill_procent_inside width={skill.procent}>
                             
                         </Wrapper>
                     </Wrapper>
@@ -35,13 +37,13 @@ const Skill = () => {
         )
     })
     return (
-        <Wrapper padding="30px 0px 0px 0px" direction="column" justify="center" width="100%">
+        <Wrapper className={isInViewport ? '' : 'isNotInViewport'} ref={targetRef} id="skillset" padding="30px 0px 0px 0px" direction="column" justify="center" width="100%">
             <Header padding="30px 0px" weight="900" size="1.5em">
                 SKILL SET
             </Header>
                 {skillSet}
                 <Wrapper direction='row' justify='center'>
-                    <Button size='12px' padding='15px 20px'>Linkedin</Button>
+                    <Button target="_blank" href="https://www.linkedin.com/in/bartek-sylwestrzak-710116204/" size='12px' padding='15px 20px'>Linkedin</Button>
                 </Wrapper>
         </Wrapper>
     )

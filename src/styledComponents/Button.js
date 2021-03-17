@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Button = styled.button`
+const Button = styled.a`
     background-color: ${({ theme }) => theme.main};
     border: none;
     padding: ${({ padding }) => padding};
@@ -10,6 +10,8 @@ const Button = styled.button`
     font-size: ${({ size }) => size};
     color: ${({ theme }) => theme.white};
     box-shadow: 0px 7px 15px ${({ theme }) => theme.main};
+    cursor: pointer;
+    text-decoration: none;
 `;
 
 export default Button;

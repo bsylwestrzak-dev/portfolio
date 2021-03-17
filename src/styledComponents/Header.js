@@ -7,5 +7,6 @@ const Header = styled.h1`
     white-space: nowrap;
     font-weight: ${({ weight }) => weight};
     padding: ${({ padding }) => padding};
+    line-height: ${({ line }) => line};
 `
 export default Header;
