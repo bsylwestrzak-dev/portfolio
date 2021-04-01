@@ -9,14 +9,14 @@ import useIsInViewport from 'use-is-in-viewport';
 const Skill = () => {
     const [isInViewport, targetRef] = useIsInViewport()
     const skills = useState([
-        {name: 'React.js', img:'/react.png', procent: '90%'},
-        {name: 'Express.js', img:'/node.png', procent: '70%'},
-        {name: 'Mongo DB', img:'/mongodb.png', procent: '60%'},
-        {name: 'Redux', img:'/redux.png', procent: '90%'},
-        {name: 'Git', img:'/git.png', procent: '70%'},
-        {name: 'Scrum', img:'/scrum.png', procent: '70%'},
+        {name: 'React.js', img:'/react.png', procent: '80%'},
+        {name: 'Express.js', img:'/node.png', procent: '60%'},
+        {name: 'Mongo DB', img:'/mongodb.png', procent: '50%'},
+        {name: 'Redux', img:'/redux.png', procent: '70%'},
+        {name: 'Git', img:'/git.png', procent: '60%'},
+        {name: 'Scrum', img:'/scrum.png', procent: '60%'},
         {name: 'Unit Testing', img:'/unit.png', procent: '50%'},
-        {name: 'Rest Api', img:'/rest.png', procent: '85%'},
+        {name: 'Rest Api', img:'/rest.png', procent: '75%'},
     ]);
     const skillSet = skills[0].map(skill => {
         return (
